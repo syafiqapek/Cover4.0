@@ -29,7 +29,7 @@ import { LoginPage } from "../pages/login/login";
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
-    ModalPageModule,
+    ModalPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
