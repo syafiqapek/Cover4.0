@@ -1,3 +1,4 @@
+import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -20,7 +21,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) 
   {
-    this.rootPage = SchedulePage; 
+    this.rootPage = LoginPage; 
   }
 
   ngOnInit(): void {
@@ -47,5 +48,9 @@ export class MyApp {
  
   goProfile(){
     this.nav.setRoot(ProfilePage);
+  }
+
+  goLogin(){
+    this.nav.setRoot(LoginPage);
   }
 }
