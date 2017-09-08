@@ -274,12 +274,11 @@ var LoginPage = (function () {
 LoginPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({
-        selector: 'page-login',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\login\login.html"*/'\n\n<ion-content>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      <img src = "assets/img/icon.png"/>\n\n      \n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <ion-list no-lines>\n\n        <ion-item>\n\n          <ion-label floating>Username</ion-label>\n\n          <ion-input type="text"></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-label floating>Password</ion-label>\n\n            <ion-input type="Password"></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <p>Forgot password<a>Get here</a></p>\n\n          </ion-item>\n\n          <button ion-button (click) = "firstModal()" color="danger" block outline>Login </button>\n\n          \n\n      </ion-list>\n\n      <b>OR</b>\n\n      <button ion-button color="primary" block outline>\n\n      <ion-icon name="logo-facebook"></ion-icon>\n\n      <div>Login with facebook</div>\n\n      </button>\n\n      <button ion-button color="danger" block outline>\n\n      <ion-icon name="logo-google"></ion-icon>\n\n      <div>Login with google</div>\n\n      </button>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\login\login.html"*/,
+        selector: 'page-login',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\login\login.html"*/'\n\n<ion-content>\n\n  <ion-card>\n\n    <ion-card-header>\n\n      <img src = "assets/img/icon.png"/>\n\n      \n\n    </ion-card-header>\n\n    <ion-card-content>\n\n      <ion-list no-lines>\n\n        <ion-item>\n\n          <ion-label floating>Username</ion-label>\n\n          <ion-input type="text"></ion-input>\n\n        </ion-item>\n\n        <ion-item>\n\n            <ion-label floating>Password</ion-label>\n\n            <ion-input type="Password"></ion-input>\n\n          </ion-item>\n\n          <ion-item>\n\n            <p>Forgot password<a>Get here</a></p>\n\n          </ion-item>\n\n          <button ion-button (click) = "firstModal()" color="danger" block outline>Login </button>\n\n          \n\n      </ion-list>\n\n    </ion-card-content>\n\n  </ion-card>\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\login\login.html"*/,
     }),
-    __metadata("design:paramtypes", [typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */]) === "function" && _a || Object, typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* ModalController */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* ModalController */]) === "function" && _c || Object])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["f" /* ModalController */]])
 ], LoginPage);
 
-var _a, _b, _c;
 //# sourceMappingURL=login.js.map
 
 /***/ }),
@@ -356,17 +355,8 @@ AppModule = __decorate([
         ],
         imports: [
             __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
-            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */], {}, {
-                links: [
-                    { loadChildren: '../pages/report/report.module#ReportPageModule', name: 'ReportPage', segment: 'report', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/history/history.module#HistoryPageModule', name: 'HistoryPage', segment: 'history', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/profile/profile.module#ProfilePageModule', name: 'ProfilePage', segment: 'profile', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/schedule/schedule.module#SchedulePageModule', name: 'SchedulePage', segment: 'schedule', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/modal/modal.module#ModalPageModule', name: 'ModalPage', segment: 'modal', priority: 'low', defaultHistory: [] },
-                    { loadChildren: '../pages/login/login.module#LoginPageModule', name: 'LoginPage', segment: 'login', priority: 'low', defaultHistory: [] }
-                ]
-            }),
-            __WEBPACK_IMPORTED_MODULE_12__pages_modal_modal_module__["ModalPageModule"],
+            __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["c" /* IonicModule */].forRoot(__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */]),
+            __WEBPACK_IMPORTED_MODULE_12__pages_modal_modal_module__["ModalPageModule"]
         ],
         bootstrap: [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["a" /* IonicApp */]],
         entryComponents: [
@@ -416,10 +406,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
  * on Ionic pages and navigation.
  */
 var ModalPage = (function () {
-    function ModalPage(navCtrl, navParams) {
+    function ModalPage(navCtrl, navParams, viewCtrl) {
         this.navCtrl = navCtrl;
         this.navParams = navParams;
+        this.viewCtrl = viewCtrl;
     }
+    ModalPage.prototype.closeModal = function () {
+        this.viewCtrl.dismiss();
+    };
     ModalPage.prototype.ionViewDidLoad = function () {
         console.log('ionViewDidLoad ModalPage');
     };
@@ -428,9 +422,9 @@ var ModalPage = (function () {
 ModalPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-modal',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\modal\modal.html"*/'<!--\n\n  Generated template for the ModalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ModalPage</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\modal\modal.html"*/,
+        selector: 'page-modal',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\modal\modal.html"*/'<!--\n\n  Generated template for the ModalPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n  <ion-navbar>\n\n    <ion-title>Service Description</ion-title>\n\n       <ion-buttons start>\n\n          <button ion-button (click)="closeModal()">\n\n            <span ion-text color="dark" showWhen="android,windows,ios">Cancel</span>\n\n            <!-- <ion-icon name="md-close" showWhen="android,windows"></ion-icon> -->\n\n          </button>\n\n      </ion-buttons>\n\n  </ion-navbar>\n\n</ion-header>\n\n\n\n<ion-content>\n\n  <ion-card>\n\n    <ion-card-content>\n\n      <ion-card-title>Owner: Faiq</ion-card-title>\n\n      <ion-list>\n\n          - Phone: Samsung<br>\n\n          - Damage : Broken Screen\n\n      </ion-list>\n\n    </ion-card-content>\n\n  </ion-card>\n\n  <span col = 2>\n\n    <button ion-button (click) = "submit()">Accept</button>\n\n  </span>\n\n</ion-content>\n\n\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\modal\modal.html"*/,
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
+    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* ViewController */]])
 ], ModalPage);
 
 //# sourceMappingURL=modal.js.map
@@ -447,11 +441,10 @@ ModalPage = __decorate([
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__ = __webpack_require__(192);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_home_home__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_report_report__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_history_history__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_profile_profile__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__pages_schedule_schedule__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_report_report__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_history_history__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__pages_profile_profile__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__pages_schedule_schedule__ = __webpack_require__(101);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -461,7 +454,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-
 
 
 
@@ -485,19 +477,19 @@ var MyApp = (function () {
         });
     };
     MyApp.prototype.goHome = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__pages_home_home__["a" /* HomePage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_schedule_schedule__["a" /* SchedulePage */]);
     };
     MyApp.prototype.goSchedule = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_9__pages_schedule_schedule__["a" /* SchedulePage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_schedule_schedule__["a" /* SchedulePage */]);
     };
-    MyApp.prototype.oReport = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_report_report__["a" /* ReportPage */]);
+    MyApp.prototype.goReport = function () {
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__pages_report_report__["a" /* ReportPage */]);
     };
     MyApp.prototype.goHistory = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_7__pages_history_history__["a" /* HistoryPage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_6__pages_history_history__["a" /* HistoryPage */]);
     };
     MyApp.prototype.goProfile = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_profile_profile__["a" /* ProfilePage */]);
+        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_7__pages_profile_profile__["a" /* ProfilePage */]);
     };
     MyApp.prototype.goLogin = function () {
         this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_0__pages_login_login__["a" /* LoginPage */]);
@@ -612,7 +604,7 @@ var ReportPage = (function () {
 ReportPage = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* IonicPage */])(),
     Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
-        selector: 'page-report',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\report\report.html"*/'<!--\n\n  Generated template for the ReportPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar>\n\n    <ion-title>ReportPage</ion-title>\n\n  </ion-navbar>\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\report\report.html"*/,
+        selector: 'page-report',template:/*ion-inline-start:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\report\report.html"*/'<!--\n\n  Generated template for the ReportPage page.\n\n\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n\n  Ionic pages and navigation.\n\n-->\n\n<ion-header>\n\n\n\n  <ion-navbar color="secondary">\n\n    <ion-buttons left>\n\n          <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n    <ion-title>Report</ion-title>\n\n  </ion-navbar>\n\n\n\n\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n</ion-content>\n\n'/*ion-inline-end:"C:\Users\USER\Desktop\intern\Cover4.0\src\pages\report\report.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["i" /* NavParams */]])
 ], ReportPage);
