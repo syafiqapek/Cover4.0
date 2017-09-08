@@ -496,21 +496,19 @@ var MyApp = (function () {
     MyApp.prototype.goProfile = function () {
         this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_8__pages_profile_profile__["a" /* ProfilePage */]);
     };
-    MyApp.prototype.goLogin = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_9__pages_schedule_schedule__["a" /* SchedulePage */]);
-    };
     return MyApp;
 }());
 __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["_13" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Nav */]),
-    __metadata("design:type", __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Nav */])
+    __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["g" /* Nav */]) === "function" && _a || Object)
 ], MyApp.prototype, "nav", void 0);
 MyApp = __decorate([
     Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["n" /* Component */])({template:/*ion-inline-start:"C:\Users\USER\Desktop\Resolv Technologies Sdn Bhd\Cover4.0\src\app\app.html"*/'<ion-menu side="left" [content]="content">\n\n        <ion-header>\n\n            <ion-navbar color="primary">\n\n      <ion-buttons left>\n\n          <button ion-button menuToggle>\n\n            <ion-icon name="menu"></ion-icon>\n\n          </button>\n\n        </ion-buttons>\n\n    <ion-title>Menu</ion-title>\n\n  </ion-navbar>\n\n        </ion-header>        \n\n        <ion-content>\n\n            <ion-list>\n\n                <button ion-item menuClose (click)="goHome()">\n\n                    <ion-icon color="primary" ios="ios-home-outline" md="md-home" item-left></ion-icon>\n\n                    <span>Home</span>\n\n                </button>\n\n                <button ion-item menuClose (click)="goSchedule()">\n\n                    <ion-icon color="primary" ios="ios-list-outline" md="md-list" item-left></ion-icon>\n\n                    <span>Schedule</span>\n\n                </button>\n\n                <button ion-item menuClose (click)="goReport()">\n\n                    <ion-icon color="primary" ios="ios-clipboard-outline" md="md-clipboard" item-left></ion-icon>\n\n                    <span>Report</span>\n\n                </button>\n\n                <button ion-item menuClose (click)="goHistory()">\n\n                    <ion-icon color="primary" ios="ios-paper-outline" md="md-paper" item-left></ion-icon>\n\n                    <span>History</span>\n\n                </button>\n\n                <button ion-item menuClose (click)="goProfile()">\n\n                    <ion-icon color="primary" ios="ios-person-outline" md="md-person" item-left></ion-icon>\n\n                    <span>Profile</span>\n\n                </button>\n\n            </ion-list>\n\n        </ion-content>\n\n    </ion-menu>\n\n    <ion-nav [root]="rootPage" #content hide-tab></ion-nav>'/*ion-inline-end:"C:\Users\USER\Desktop\Resolv Technologies Sdn Bhd\Cover4.0\src\app\app.html"*/
     }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]])
+    __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["j" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_4__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
 ], MyApp);
 
+var _a, _b, _c, _d;
 //# sourceMappingURL=app.component.js.map
 
 /***/ }),

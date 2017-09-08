@@ -50,8 +50,4 @@ export class MyApp {
   goProfile(){
     this.nav.setRoot(ProfilePage);
   }
-
-  goLogin(){
-    this.nav.setRoot(SchedulePage);
-  }
 }
