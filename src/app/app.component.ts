@@ -1,5 +1,6 @@
 import { LoginPage } from './../pages/login/login';
 import { Component, ViewChild } from '@angular/core';
+
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -31,7 +32,7 @@ export class MyApp {
   }
 
   goHome(){
-    this.nav.setRoot(SchedulePage);
+    this.nav.setRoot(HomePage);
   }
 
   goSchedule(){
@@ -49,6 +50,7 @@ export class MyApp {
   goProfile(){
     this.nav.setRoot(ProfilePage);
   }
+<<<<<<< HEAD
 
   goLogin(){
     this.nav.setRoot(LoginPage);
@@ -57,4 +59,6 @@ export class MyApp {
   goLogout(){
     this.nav.setRoot(LoginPage);
   }
+=======
+>>>>>>> dcf6ecf44083a2a1cb2b6907baa514c2aa82160e
 }

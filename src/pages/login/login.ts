@@ -1,7 +1,8 @@
-import { HomePage } from './../home/home';
 import { ReportPage } from './../report/report';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { SchedulePage } from "../schedule/schedule";
+import { HomePage } from "../home/home";
 
 /**
  * Generated class for the LoginPage page.
@@ -17,10 +18,10 @@ import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angu
 })
 export class LoginPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, public modalCtrl: ModalController) {
+  constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
   firstModal(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.setRoot(HomePage);
   }
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

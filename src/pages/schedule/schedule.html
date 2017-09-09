@@ -11,35 +11,18 @@
             <ion-icon name="menu"></ion-icon>
           </button>
         </ion-buttons>
-    <ion-title>Appointment's List</ion-title>
+    <ion-title>Search for An Appointment</ion-title>
   </ion-navbar>
-
-
-<ion-content text-center style = "margin-top: 5px;">
-  <h2 style = "color:blue">List</h2>
-  <ion-card>
-    <ion-card-content>
-      <ion-list>
-        <button ion-item (click) = "openModal()">Lita<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-        <button ion-item (click) = "openModal()">Faiq<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-        <button ion-item (click) = "openModal()">Aiman<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-        <button ion-item (click) = "openModal()">LiPhilip Chaneyta<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-        <button ion-item (click) = "openModal()">Grene<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-        <button ion-item (click) = "openModal()">Mason<br>Broken Screen
-          <ion-icon color="" ios="ios-arrow-forward-outline" md="md-arrow-forward" item-right></ion-icon>
-        </button>
-      </ion-list>
-    </ion-card-content>
-  </ion-card>
+</ion-header>
+<ion-content  text-center style="margin-top: 5px;">
+<ion-card>
+<ion-card-content>
+  <ion-list>
+    <ion-item>
+        <ion-label stacked color="primary">Date</ion-label>
+        <ion-input type="date" required="required"></ion-input>
+    </ion-item>
+</ion-list>
+</ion-card-content>
+</ion-card>
 </ion-content>
-
