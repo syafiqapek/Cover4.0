@@ -53,4 +53,8 @@ export class MyApp {
   goLogin(){
     this.nav.setRoot(LoginPage);
   }
+
+  goLogout(){
+    this.nav.setRoot(LoginPage);
+  }
 }
