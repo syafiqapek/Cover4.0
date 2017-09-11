@@ -50,7 +50,6 @@ export class MyApp {
   goProfile(){
     this.nav.setRoot(ProfilePage);
   }
-<<<<<<< HEAD
 
   goLogin(){
     this.nav.setRoot(LoginPage);
@@ -59,6 +58,4 @@ export class MyApp {
   goLogout(){
     this.nav.setRoot(LoginPage);
   }
-=======
->>>>>>> dcf6ecf44083a2a1cb2b6907baa514c2aa82160e
 }
